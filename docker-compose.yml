@@ -1,0 +1,15 @@
+services:
+
+  php:
+    build: '.docker/php'
+    working_dir: '/app'
+    volumes:
+      - './app:/app'
+
+  composer:
+    image: 'composer:2'
+    working_dir: '/app'
+    profiles:
+      - 'cli'
+    volumes:
+      - './app:/app'

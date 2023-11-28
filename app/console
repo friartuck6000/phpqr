@@ -1,0 +1,17 @@
+#!/usr/bin/env php
+<?php
+
+require __DIR__.'/vendor/autoload.php';
+
+use Symfony\Component\Console\Application;
+use Anthem\QrGenerator\Command as AppCommand;
+
+const OUTPUT_DIR = __DIR__.'/output';
+
+$app = new Application();
+$app->add(new AppCommand\GenerateCommand(OUTPUT_DIR));
+$app->add(new AppCommand\BatchGenerateCommand(OUTPUT_DIR));
+$app->add(new AppCommand\CleanCommand(OUTPUT_DIR));
+$app->add(new AppCommand\LinkCleanCommand());
+
+$app->run();

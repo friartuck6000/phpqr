@@ -1,0 +1,23 @@
+{
+    "name": "anthem/qr-generator",
+    "description": "Quick QR code generator",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Anthem\\QrGenerator\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Kyle Tucker",
+            "email": "kyleatucker@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "symfony/console": "6.0.x-dev",
+        "endroid/qr-code": "4.x-dev",
+        "symfony/yaml": "6.0.x-dev"
+    }
+}
